@@ -26,17 +26,8 @@ console.log("websocket server created")
 
 var MongoClient = require('mongodb').MongoClient;
 
-// default to a 'localhost' configuration:
-var DBurl = "mongodb://localhost:27017/PDSdb";
-// if OPENSHIFT env variables are present, use the available connection info:
-if(process.env.OPENSHIFT_MONGODB_DB_PASSWORD){
-  DBurl = "mongodb://"+process.env.OPENSHIFT_MONGODB_DB_USERNAME + ":" +
-  process.env.OPENSHIFT_MONGODB_DB_PASSWORD + "@" +
-  process.env.OPENSHIFT_MONGODB_DB_HOST + ':' +
-  process.env.OPENSHIFT_MONGODB_DB_PORT + '/' +
-  process.env.OPENSHIFT_APP_NAME;
-  console.log("DB URL (OPENSHIFT) : " + DBurl );
-}
+var DBurl = process.env.OPENSHIFT_MONGODB_DB_URL||"mongodb://localhost:27017/";
+DBurl+="PDSdb"; console.log("DB URL  : " + DBurl );
 
 var Csummary; // Containts Consumption Summary (Updated every 10 min).
 
