@@ -26,8 +26,8 @@ console.log("websocket server created")
 
 var MongoClient = require('mongodb').MongoClient;
 
-var DBurl = "mongodb://userAYV:Dbfqoa7nw48Axl7E@mongodb/"||"mongodb://localhost:27017/";
-DBurl+="PDSdb"; console.log("DB URL  : " + DBurl );
+var DBurl = "mongodb://user1H2:wGmuEi3Oa0hq0e3K@pdsdb/PDSdb";
+console.log("DB URL  : " + DBurl );
 
 var Csummary; // Containts Consumption Summary (Updated every 10 min).
 
