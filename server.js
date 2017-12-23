@@ -30,7 +30,7 @@ var MongoClient = require('mongodb').MongoClient;
 var DBurl = "mongodb://localhost:27017/PDSdb";
 // if OPENSHIFT env variables are present, use the available connection info:
 if(process.env.OPENSHIFT_MONGODB_DB_PASSWORD){
-  DBurl = process.env.OPENSHIFT_MONGODB_DB_USERNAME + ":" +
+  DBurl = "mongodb://"+process.env.OPENSHIFT_MONGODB_DB_USERNAME + ":" +
   process.env.OPENSHIFT_MONGODB_DB_PASSWORD + "@" +
   process.env.OPENSHIFT_MONGODB_DB_HOST + ':' +
   process.env.OPENSHIFT_MONGODB_DB_PORT + '/' +
