@@ -1,23 +1,4 @@
 {
-  "name": "OpenShift-WS-App",
-  "version": "1.0.0",
-  "description": "Web Sockets app from Heroku",
-  "keywords": [
-    "OpenShift",
-    "Node.js",
-    "application",
-    "openshift"
-  ],
-  "author": {
-    "name": "OpenShift",
-    "email": "ramr@example.org",
-    "url": "http://www.openshift.com/"
-  },
-  "homepage": "http://www.openshift.com/",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/openshift/origin-server"
-  },
   "engines": {
     "node": ">= 0.6.0",
     "npm": ">= 1.0.0"
