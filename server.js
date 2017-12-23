@@ -35,6 +35,7 @@ if(process.env.OPENSHIFT_MONGODB_DB_PASSWORD){
   process.env.OPENSHIFT_MONGODB_DB_HOST + ':' +
   process.env.OPENSHIFT_MONGODB_DB_PORT + '/' +
   process.env.OPENSHIFT_APP_NAME;
+  console.log("DB URL (OPENSHIFT) : " + DBurl );
 }
 
 var Csummary; // Containts Consumption Summary (Updated every 10 min).
